@@ -20,7 +20,10 @@ import ShopHeader from '../../components/ShopHeader/ShopHeader.vue'
 import {reqShopsGoods,reqShopsRatings,reqShopsInfo} from '../../api'
 export default {
    mounted(){
+      //将info从接口中请求获取到state中
      this.$store.dispatch('getShopInfo')
+      this.$store.dispatch('getShopGoods')
+       this.$store.dispatch('getShopRatings')
   },
   components:{
     ShopHeader//注册
